@@ -1,13 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./Header.scss";
 
 export default function Header() {
 	return (
-		<div>
-			<ul>
-				<NavLink to="/">Home</NavLink>
-				<NavLink to="/quotes">Quotes</NavLink>
-			</ul>
-		</div>
+		<nav>
+			<section className="nav">
+				<section className="logo">
+					<NavLink to="/" className="title">
+						Great Quotes
+					</NavLink>
+				</section>
+				<section className="links">
+					<NavLink to="/">All Quotes</NavLink>
+					<NavLink to="/quotes">Add a Quote</NavLink>
+				</section>
+			</section>
+		</nav>
 	);
 }
