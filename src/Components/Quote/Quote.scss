@@ -1,0 +1,15 @@
+.quote {
+  background-color: rgb(211, 213, 178);
+  display: flex;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}

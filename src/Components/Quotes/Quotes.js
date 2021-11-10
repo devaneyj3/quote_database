@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Card from "../../UI/Card/Card";
+import QuoteContent from "../QuoteContent/QuoteContent";
+import CustomButton from "../CustomButton/CustomButton";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Quotes.scss";
 
@@ -7,7 +9,7 @@ const QUOTES = [
 	{
 		id: 1,
 		body: "You miss 100% of the shots you don't take",
-		author: "Michael Scott",
+		author: "Michael Gary Scott",
 		comments: [],
 	},
 	{
@@ -28,15 +30,15 @@ export default function Quotes() {
 				quotes.map((quote) => {
 					return (
 						<Card key={quote.id} className="quotes">
-							<div className="content">
-								<h1 className="body">{quote.body}</h1>
-								<p className="author">{quote.author}</p>
-							</div>
-							<div
-								className="button"
-								onClick={() => navigate(`${location.pathname}/${quote.id}`)}>
-								<button className="view">View</button>
-							</div>
+							<QuoteContent quote={quote} />
+							<CustomButton
+								onClick={() =>
+									navigate(`${location.pathname}/${quote.id}`, {
+										state: QUOTES,
+									})
+								}>
+								View
+							</CustomButton>
 						</Card>
 					);
 				})

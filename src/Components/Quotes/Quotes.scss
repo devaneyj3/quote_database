@@ -1,25 +1,4 @@
 .quotes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-;
-background-color: #12dfdf;
-  .body {
-    font-weight: bold;
-    line-height: 2;
-  }
-  .author {
-    font-style: italic;
-  }
-  .button {
-    width: 20%;
-    .view {
-      background-color: teal;
-      border-radius: 5px;
-      width: 100%;
-      color: white;
-      border: none;
-      height: 50px
-    }
-  }
+  background-color: #12dfdf;
+  flex-direction: row;
 }
