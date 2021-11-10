@@ -1,7 +1,8 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Quotes from "./Components/Quotes/Quotes";
+import Quote from "./Components/Quote/Quote";
 import "./App.css";
 
 const App = () => {
@@ -9,7 +10,9 @@ const App = () => {
 		<div className="App">
 			<Header />
 			<Routes>
-				<Route path="/" element={<Quotes />} />
+				<Route path="/" element={<Navigate to="/quotes" />} />
+				<Route path="/quotes/" element={<Quotes />} />
+				<Route path="/quotes/:quoteID" element={<Quote />} />
 			</Routes>
 		</div>
 	);

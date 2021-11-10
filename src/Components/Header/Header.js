@@ -12,8 +12,8 @@ export default function Header() {
 					</NavLink>
 				</section>
 				<section className="links">
-					<NavLink to="/">All Quotes</NavLink>
-					<NavLink to="/quotes">Add a Quote</NavLink>
+					<NavLink to="/quotes">All Quotes</NavLink>
+					<NavLink to="/add-quote">Add a Quote</NavLink>
 				</section>
 			</section>
 		</nav>

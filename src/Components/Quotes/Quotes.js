@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Card from "../../UI/Card/Card";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Quotes.scss";
 
 const QUOTES = [
@@ -17,20 +19,25 @@ const QUOTES = [
 ];
 export default function Quotes() {
 	const [quotes, setQuotes] = useState(QUOTES);
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	return (
 		<div>
 			{quotes.length > 0 ? (
 				quotes.map((quote) => {
 					return (
-						<section key={quote.id} className="quotes">
+						<Card key={quote.id} className="quotes">
 							<div className="content">
 								<h1 className="body">{quote.body}</h1>
 								<p className="author">{quote.author}</p>
 							</div>
-							<div className="button">
+							<div
+								className="button"
+								onClick={() => navigate(`${location.pathname}/${quote.id}`)}>
 								<button className="view">View</button>
 							</div>
-						</section>
+						</Card>
 					);
 				})
 			) : (
