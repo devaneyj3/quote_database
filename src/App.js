@@ -3,6 +3,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Quotes from "./Components/Quotes/Quotes";
 import Quote from "./Components/Quote/Quote";
+import AddQuote from "./Components/AddQuote/AddQuote";
 import "./App.css";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Navigate to="/quotes" />} />
 				<Route path="/quotes/" element={<Quotes />} />
+				<Route path="/add-quote/" element={<AddQuote />} />
 				<Route path="/quotes/:quoteID" element={<Quote />} />
 			</Routes>
 		</div>

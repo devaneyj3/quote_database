@@ -12,7 +12,6 @@ export default function Quote() {
 	const { state } = useLocation();
 
 	const quote = state.find((quote) => quote.id === parseInt(quoteID));
-
 	return (
 		<section>
 			<Card className="quote">

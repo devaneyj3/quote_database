@@ -10,13 +10,11 @@ const QUOTES = [
 		id: 1,
 		body: "You miss 100% of the shots you don't take",
 		author: "Michael Gary Scott",
-		comments: [],
 	},
 	{
 		id: 2,
 		body: "Lauren likes to make guacomole",
 		author: "Timothy Susan Rorher",
-		comments: [],
 	},
 ];
 export default function Quotes() {
