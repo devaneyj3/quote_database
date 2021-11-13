@@ -5,20 +5,7 @@ import CustomButton from "../CustomButton/CustomButton";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Quotes.scss";
 
-const QUOTES = [
-	{
-		id: 1,
-		body: "You miss 100% of the shots you don't take",
-		author: "Michael Gary Scott",
-	},
-	{
-		id: 2,
-		body: "Lauren likes to make guacomole",
-		author: "Timothy Susan Rorher",
-	},
-];
-export default function Quotes() {
-	const [quotes, setQuotes] = useState(QUOTES);
+export default function Quotes({ quotes }) {
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -32,7 +19,7 @@ export default function Quotes() {
 							<CustomButton
 								onClick={() =>
 									navigate(`${location.pathname}/${quote.id}`, {
-										state: QUOTES,
+										state: quotes,
 									})
 								}>
 								View

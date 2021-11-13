@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { v4 as uuidv4 } from "uuid";
+import "./AddQuote.scss";
 
-export default function AddQuote() {
+export default function AddQuote({ quotes, setQuotes }) {
 	const [quote, setQuote] = useState("");
 	const [author, setAuthor] = useState("");
 	const formSubmit = (e) => {
 		e.preventDefault();
-		console.log("Quote: ", quote);
-		console.log("Author: ", author);
+		const newQuote = {
+			id: uuidv4(),
+			body: quote,
+			author: author,
+		};
+		console.log("Quote: ", newQuote);
+		setQuotes([...quotes, newQuote]);
+		setQuote("");
+		setAuthor("");
 	};
 	return (
-		<Form onSubmit={formSubmit}>
+		<Form onSubmit={formSubmit} className="addNewQuote">
 			<FormGroup>
 				<Label for="quote">Quote</Label>
 				<Input

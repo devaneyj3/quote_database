@@ -9,7 +9,12 @@ nav {
     margin: 0 70px 0 70px;
     a {
       color: white;
-      margin: 25px
+      margin: 25px;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: grey;
+      }
     }
   }
 }
