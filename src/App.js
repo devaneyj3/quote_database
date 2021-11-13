@@ -26,9 +26,9 @@ const App = () => {
 			<Header />
 			<Routes>
 				<Route path="/" element={<Navigate to="/quotes" />} />
-				<Route path="/quotes/" element={<Quotes quotes={quotes} />} />
+				<Route path="/quotes" element={<Quotes quotes={quotes} />} />
 				<Route
-					path="/add-quote/"
+					path="/add-quote"
 					element={<AddQuote setQuotes={setQuotes} quotes={quotes} />}
 				/>
 				<Route path="/quotes/:quoteID" element={<Quote />} />

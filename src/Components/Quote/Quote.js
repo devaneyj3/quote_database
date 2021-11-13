@@ -11,7 +11,8 @@ export default function Quote() {
 	const navigate = useNavigate();
 	const { state } = useLocation();
 
-	const quote = state.find((quote) => quote.id === parseInt(quoteID));
+	const quote = state.find((quote) => parseInt(quote.id) === parseInt(quoteID));
+	console.log(quote);
 	return (
 		<section>
 			<Card className="quote">
