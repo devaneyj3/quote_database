@@ -14,8 +14,8 @@ const QUOTES = [
 	},
 	{
 		id: 2,
-		body: "Lauren likes to make guacomole",
-		author: "Timothy Susan Rorher",
+		body: "What kind of bear is best",
+		author: "Jim Halpert",
 	},
 ];
 
