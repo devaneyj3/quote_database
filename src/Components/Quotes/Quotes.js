@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../../UI/Card/Card";
 import QuoteContent from "../QuoteContent/QuoteContent";
 import CustomButton from "../CustomButton/CustomButton";
